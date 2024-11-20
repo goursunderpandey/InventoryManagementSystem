@@ -7,6 +7,9 @@ require("../Server/Config")
 const Signup = require("../Server/Authetication/Routes/Routes")
 app.use(Signup)
 
+const customer = require("../Server/Customer/Routes/Customer");
+app.use(customer)
+
 app.listen(PORT,() => {
     console.log(`Server is running of ${PORT}`)
 })
